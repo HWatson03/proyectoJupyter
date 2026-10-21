@@ -9,6 +9,6 @@ hombres_2024,int64,0,0.0,338,98.54
 mujeres_2024,int64,0,0.0,342,99.71
 edad_mediana_2024,float64,0,0.0,24,7.0
 crecimiento_absoluto_2012_2024,int64,0,0.0,334,97.38
-crecimiento_relativo_pct_2012_2024,str,0,0.0,343,100.0
+crecimiento_relativo_pct_2012_2024,float64,0,0.0,343,100.0
 tasa_anual_pct_2012_2024,float64,0,0.0,343,100.0
 porcentaje_mujeres_2024,float64,0,0.0,343,100.0
