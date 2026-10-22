@@ -1,6 +1,0 @@
-﻿,tipo,pregunta,variables,tecnica_prevista
-0,Descriptiva,¿Cómo se distribuye la población municipal en 2024?,poblacion_2024,Descriptivos e histograma
-1,Descriptiva,¿Cómo se distribuye la edad mediana municipal?,edad_mediana_2024,Cuartiles e histograma
-2,Comparativa,¿Cómo varía la cantidad de municipios por departamento?,departamento,"Frecuencias, porcentajes y barras"
-3,Comparativa,¿Cómo difiere la población total entre departamentos?,departamento; poblacion_2024,"Suma por grupo, contraste de totales"
-4,Relacional,¿Existe asociación entre edad mediana y crecimiento anual?,edad_mediana_2024; tasa_anual_pct_2012_2024,Dispersión y Pearson exploratoria
