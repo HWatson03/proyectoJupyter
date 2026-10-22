@@ -1,0 +1,21 @@
+# Microdatos y derivados a nivel de registro: nunca versionar.
+*.sav
+*.zsav
+*.por
+*.dta
+*.parquet
+data/individual/
+data/raw/
+exportaciones_eh2023/*muestra*
+exportaciones_eh2023/*registro*
+
+# Archivos temporales y estado local de Jupyter/editores.
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*.tmp
+*.temp
+*.swp
+.~lock.*#
+
+/.venv/

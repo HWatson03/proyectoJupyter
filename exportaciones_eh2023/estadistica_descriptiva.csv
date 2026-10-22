@@ -1,0 +1,4 @@
+﻿variable,etiqueta,n_observaciones_validas,media_muestral,mediana_muestral,desviacion_estandar_muestral,minimo,Q1,Q3,maximo,media_ponderada_Factor_Rev2025
+totper,Total de personas,12815,3.171829886851346,3.0,1.7192896242385878,1.0,2.0,4.0,14.0,3.1349398526481305
+s06a_16,"¿Cuántos cuartos o habitaciones de esta vivienda ocupa su hogar, sin contar baño, cocina, lavandería, garage, depósito o negocio?",12815,2.7085446742099104,3.0,1.328348105863923,1.0,2.0,3.0,9.0,2.6268190143390937
+s06a_17,"De estos cuartos o habitaciones, ¿cuántos usan exclusivamente para dormir?",12815,1.6601638704642996,1.0,1.1031197744407872,0.0,1.0,2.0,9.0,1.5901486158364917

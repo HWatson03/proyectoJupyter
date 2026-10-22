@@ -1,0 +1,6 @@
+﻿tipo,pregunta,variables,tecnica
+Descriptiva,¿Qué materiales predominan en las paredes de las viviendas?,s06a_03; Factor_Rev2025,"Frecuencias, porcentajes y estimación ponderada"
+Descriptiva,¿Cuál es la distribución de las fuentes principales de agua?,s06a_07; Factor_Rev2025,"Frecuencias, porcentajes y estimación ponderada"
+Comparativa,¿Cómo varía el material de paredes entre áreas urbana y rural?,s06a_03; area; Factor_Rev2025,Tabla cruzada de porcentajes ponderados por área
+Comparativa,¿Cómo difiere el número de habitaciones ocupadas entre áreas urbana y rural?,s06a_16; area; Factor_Rev2025,Medias y distribuciones ponderadas por área; contraste descriptivo
+Relacional,¿Qué asociación descriptiva existe entre personas por hogar y habitaciones ocupadas?,totper; s06a_16,Correlación de Spearman y diagrama/tabulación exploratoria; sin causalidad
