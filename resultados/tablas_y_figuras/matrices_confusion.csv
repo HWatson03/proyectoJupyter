@@ -1,0 +1,13 @@
+﻿modelo,real,predicho,hogares
+baseline_mayoritaria,con electricidad,con electricidad,2458
+baseline_mayoritaria,con electricidad,sin electricidad,0
+baseline_mayoritaria,sin electricidad,con electricidad,105
+baseline_mayoritaria,sin electricidad,sin electricidad,0
+regresion_logistica,con electricidad,con electricidad,2243
+regresion_logistica,con electricidad,sin electricidad,215
+regresion_logistica,sin electricidad,con electricidad,7
+regresion_logistica,sin electricidad,sin electricidad,98
+arbol_decision,con electricidad,con electricidad,2225
+arbol_decision,con electricidad,sin electricidad,233
+arbol_decision,sin electricidad,con electricidad,12
+arbol_decision,sin electricidad,sin electricidad,93

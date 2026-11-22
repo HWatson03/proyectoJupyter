@@ -1,13 +1,18 @@
-# Análisis de la Encuesta de Hogares 2023 — Vivienda
+# Proyecto Final — Análisis de la Encuesta de Hogares 2023
 
-Proyecto académico de análisis exploratorio de las características habitacionales de los hogares bolivianos, para Ingeniería de Software I de la Universidad Amazónica de Pando.
+Proyecto académico de análisis descriptivo y modelado predictivo de las características habitacionales de los hogares bolivianos, para Ingeniería de Software I de la Universidad Amazónica de Pando.
 
-## Contenido
+## Estructura del proyecto
 
-- `analisis_encuesta_hogares_2023_vivienda.ipynb`: notebook ejecutable con inspección del archivo SPSS, auditoría de calidad, análisis descriptivo, cinco visualizaciones y exportaciones agregadas.
-- `exportaciones_eh2023/`: diccionario de variables, auditoría, tablas descriptivas y de frecuencias, plan de preguntas, resumen de resultados y cinco gráficos PNG.
-- `Informe Encuesta Hogares 2023 Vivienda.docx`: documentación académica existente. El notebook no crea ni modifica documentos Word.
-- `pyproject.toml` y `uv.lock`: dependencias para reproducir el análisis.
+- `informe/Informe_Final.pdf`: informe final (lo agregará el equipo).
+- `notebooks/Proyecto_Final.ipynb`: notebook ejecutable del análisis.
+- `datos/`: ubicación opcional para el archivo original; no se versionan microdatos.
+- `modelos/`: preprocesador y modelos entrenados para clasificar hogares sin electricidad.
+- `resultados/tablas_y_figuras/`: diccionario, auditoría, tablas descriptivas, comparación de modelos y gráficos.
+- `presentacion/Defensa_Proyecto.pptx`: presentación de defensa (la agregará el equipo).
+- `guion/Guion_Video_Exposicion.md`: guion de 15–17 minutos; el equipo grabará el video.
+- `requirements.txt`: dependencias de Python.
+- `pyproject.toml` y `uv.lock`: definición del entorno con `uv`.
 
 El proyecto no contiene microdatos versionados. El archivo original `EH2023_Vivienda.sav` debe obtenerse desde la fuente oficial del [INE de Bolivia, catálogo ANDA](https://anda.ine.gob.bo/index.php/catalog/108), y guardarse localmente.
 
@@ -27,6 +32,13 @@ uv sync
 uv run jupyter lab
 ```
 
+Con `pip`:
+
+```bash
+pip install -r requirements.txt
+jupyter lab
+```
+
 También se puede abrir el notebook en Jupyter Notebook o Colab con las dependencias instaladas.
 
 ## Ubicar el archivo SPSS
@@ -36,14 +48,17 @@ El notebook busca el archivo en este orden:
 1. La ruta configurada en la variable de entorno `EH2023_SAV_PATH`.
 2. `/home/usic03/Descargas/BD_EH2023/EH2023_Vivienda.sav`.
 3. `data/EH2023_Vivienda.sav` dentro del proyecto.
+4. `datos/EH2023_Vivienda.sav` dentro del proyecto.
 
 En otra computadora o en Colab, se recomienda establecer `EH2023_SAV_PATH` antes de ejecutar el notebook, o editar la ruta predeterminada en la primera sección de configuración. El SAV está excluido de Git por `.gitignore`; no debe añadirse a commits ni publicarse.
 
 ## Ejecutar el análisis
 
-Abre `analisis_encuesta_hogares_2023_vivienda.ipynb` y ejecuta todas las celdas en orden. El notebook lee el SAV sin reemplazar sus códigos por etiquetas, documenta los metadatos SPSS y genera los CSV agregados y cinco gráficos PNG en `exportaciones_eh2023/`. No crea un CSV con registros individuales y no genera documentos Word.
+Abre `notebooks/Proyecto_Final.ipynb` y ejecuta todas las celdas en orden. El notebook detecta la raíz del proyecto si Jupyter lo inicia desde `notebooks/`. Lee el SAV sin reemplazar sus códigos por etiquetas, realiza análisis descriptivo, comparaciones exploratorias y entrena una línea base, regresión logística y árbol de decisión para detectar hogares sin electricidad. Genera métricas y gráficos agregados en `resultados/tablas_y_figuras/` y guarda los pipelines y el preprocesador en `modelos/`. No crea archivos con registros individuales ni genera el informe o la presentación.
 
-Las estadísticas sin ponderar describen la muestra observada. Las tablas que usan `Factor_Rev2025` se presentan como estimaciones puntuales ponderadas. El notebook no estima errores estándar ni intervalos de confianza que incorporen plenamente el diseño muestral.
+El informe académico desarrolla los capítulos I–VI, referencias y anexos en el documento disponible en Drive y en `informe/Informe_Final.docx`. La carpeta `guion/` contiene el texto de exposición; el equipo debe grabar y entregar el video y preparar sus diapositivas.
+
+Las estadísticas sin ponderar describen la muestra observada. Las tablas que usan `Factor_Rev2025` se presentan como estimaciones puntuales ponderadas. El ejercicio predictivo usa una partición aleatoria estratificada y métricas sin ponderar; no estima errores estándar ni incorpora plenamente estratos y UPM, por lo que no representa una evaluación de desempeño a escala poblacional.
 
 ## Fuente y referencias
 
